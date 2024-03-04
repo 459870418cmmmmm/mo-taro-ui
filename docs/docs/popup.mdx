@@ -1,0 +1,14 @@
+# Popup
+
+| 属性 | 是否必填 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- | --- |
+| className | 否 | - | `string` | - |
+| isOpen | 否 | 是否打开 | `boolean` | - |
+| fullscreen | 否 | 是否全屏 | `boolean` | - |
+| height | 否 | 高度 | `string` | - |
+| showCloseIcon | 否 | 显示关闭icon | `boolean` | `true` |
+| onClose | 否 | 关闭回调 | `()=>void` | - |
+| children | 否 | - | `React.ReactNode` | - |
+
+设置fullscreen时，height无效
+未设置fullscreen和height时，为自适应高度

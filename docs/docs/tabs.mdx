@@ -1,0 +1,28 @@
+# Tabs
+
+| 属性 | 是否必填 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- | --- |
+| className | 否 | - | `string` | - |
+| alignment | 否 | - | `horizontal` `vertical` | `horizontal` |
+| activeKey | 否 | 选择的key | `string` | - |
+| defaultActiveKey | 否 | 默认选择的key | `string` | - |
+| type | 否 | - | `default` `underline` `circle` | `default` |
+| showMask | 否 | 是否显示遮罩 | `boolean` | `false` |
+| withAnimation | 否 | 选中项是否移动到中间 | `boolean` | `false` |
+| onChange | 否 | onChange回调 | `(val)=>void` | - |
+| children | 否 | - | `React.ReactNode` | - |
+| tabId | 否 | - |  `string` | - |
+
+type为circle的时候需要传withAnimation为true
+withAnimation为true的时候tabId必填
+
+## Tabs.Tab
+
+| 属性 | 是否必填 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- | --- |
+| title | 是 | 标题 | `React.ReactNode` | - |
+| key | 是 | - | `number` `string` | - |
+| disabled | 否 | 是否禁用 | `boolean` | `false` |
+| children | 否 | - | `React.ReactNode` | - |
+
+

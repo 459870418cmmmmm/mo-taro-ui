@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+
+.fps-side-bar {
+  position: relative;
+  display: flex;
+  height: 100vh;
+
+  &-header {
+    position: relative;
+  }
+
+  &-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    overflow-x: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &-item {
+    position: relative;
+    padding: 32px;
+    cursor: pointer;
+    background-color: #f5f5f5;
+  }
+
+  &-active {
+    color: blue;
+    background-color: #fff;
+  }
+}

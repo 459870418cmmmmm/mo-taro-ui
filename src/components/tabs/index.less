@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+}
+
+.fps-tabs {
+  position: relative;
+
+  &-header {
+    position: relative;
+  }
+
+  &-header-mask {
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 1;
+  }
+
+  &-header-mask-left {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 100%;
+    background: linear-gradient(90deg,#fff,hsla(0,0%,100%,0));
+  }
+
+  &-header-mask-right {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 30px;
+    height: 100%;
+    background: linear-gradient(270deg,#fff,hsla(0,0%,100%,0));
+  }
+
+  &-header-mask-top {
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 30px;
+    background: linear-gradient(180deg,#fff,hsla(0,0%,100%,0));
+  }
+
+  &-header-mask-bottom {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    background: linear-gradient(0deg,#fff,hsla(0,0%,100%,0));
+  }
+
+  &-list {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  &-scroll {
+    display: flex;
+    white-space: nowrap;
+  }
+  &-default {
+    color: #434343;
+    &-active {
+      color: #000000;
+    }
+
+    &-active::after{}
+
+    &-disabled  {
+      color: #d8d8d8;
+    }
+  }
+
+  &-underline, &-underline-split {
+    color:#434343;
+    .fps-tabs-item {
+      flex: 1;
+      text-align: center;
+      position: relative;
+      padding-bottom: 6px;
+    }
+    .fps-tabs-active{
+      color: #000;
+      font-weight: 600;
+    }
+    .fps-tabs-active::after{
+      content: '';
+      display: flex;
+      position: relative;
+      bottom: -6px;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background-color: #c10016;
+    }
+    .fps-tabs-disabled  {
+      color: #d8d8d8;
+    }
+  }
+
+  &-underline-split{
+    .fps-tabs-item:not(:last-child)::before {
+      content: '';
+      display: flex;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 1px;
+      height: 80%;
+      background-color: #000;
+    }
+  }
+
+  &-item {
+    display: inline-block;
+  }
+
+  &-circle {
+      padding-top: 16px;
+      padding-bottom: 38px;
+      position: relative;
+
+      .fps-tabs-item {
+        box-sizing: content-box;
+        padding: 7px 18px;
+        margin: 0 15px;
+        margin-bottom: 5px;
+        font-size: 12px;
+        font-weight: 400;
+        color: #434343;
+      }
+
+      .fps-tabs-active-circle {
+        position: absolute;
+        top: 0px;
+        background: transparent;
+        border-radius: 16px;
+        box-shadow: 2px 4px 4px 0 rgb(0 0 0 / 19%), inset 0 0 4px 0 rgb(0 0 0 / 4%);
+        transition: all 0.5s;
+      }
+
+
+  }
+
+}

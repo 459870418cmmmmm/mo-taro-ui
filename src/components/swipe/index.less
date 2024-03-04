@@ -1,0 +1,24 @@
+.fps-swipe {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+
+  &-view {
+    box-sizing: border-box;
+    z-index: 5;
+    overflow: hidden;
+    background-color: #fff;
+  }
+
+  &-operation {
+    box-sizing: border-box;
+    position: absolute;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: left;
+    align-items: center;
+    z-index: 2;
+    right: 0;
+    height: 100%;
+  }
+}

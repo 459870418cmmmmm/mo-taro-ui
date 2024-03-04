@@ -1,0 +1,64 @@
+@default-color: #f6f5f4;
+@default-text-color: #000;
+@primary-color: #000;
+@cartier-color: #c10016;
+
+* {
+  box-sizing: border-box;
+}
+
+.fps-button::after{
+  border: none;
+}
+
+.fps-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+
+  &-medium {
+    height: 44px;
+    font-size: 16px;
+  }
+
+  &-small {
+    height: 28px;
+    font-size: 12px;
+  }
+
+  &-default {
+    &.fps-button-fill-solid {
+      background: @default-color;
+      color: @default-text-color;
+      border: 1px solid @default-color;
+    }
+  }
+
+  &:not(&-default) {
+    border: 1px solid var(--color);
+    &.fps-button-fill-solid {
+      background: var(--color);
+      color: #fff;
+    }
+    &.fps-button-fill-outline {
+      background: transparent;
+      color: var(--color);
+    }
+    &.fps-button-fill-none {
+      background: transparent;
+      color: var(--color);
+      border: none;
+    }
+  }
+
+  &-primary {
+    --color: @primary-color;
+  }
+
+  &-cartier {
+    --color: @cartier-color;
+  }
+}

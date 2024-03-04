@@ -1,0 +1,33 @@
+.fps-badge-wrapper {
+  position: relative;
+  display: inline-block;
+
+  .fps-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    transform: translate(50%,-50%);
+    pointer-events: none;
+
+    &-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 5px;
+    }
+
+    &-content {
+      box-sizing: border-box;
+      min-width: 16px;
+      padding: 2px 4px;
+      color: #fff;
+      font-size: 9px;
+      line-height: 12px;
+      text-align: center;
+      white-space: nowrap;
+    }
+  }
+}

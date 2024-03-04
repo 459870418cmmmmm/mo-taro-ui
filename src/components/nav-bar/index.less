@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+}
+
+.fps-nav-bar {
+  position: fixed;
+  z-index: 999;
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  align-items: center;
+
+  &-left {
+    position: absolute;
+  }
+
+  &-title {
+    flex: auto;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}

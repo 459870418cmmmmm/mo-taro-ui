@@ -1,0 +1,45 @@
+.fps-input-number-wrapper {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  border: 1px solid #979797;
+  .fps-input-number {
+    box-sizing: border-box;
+    width: 32px;
+    height: 24px;
+    .fps-input-wrapper {
+      min-height: auto;
+      .fps-input {
+        min-height: auto;
+        height: 24px;
+        text-align: center;
+        font-size: 11px;
+        // TODO: temporarily method
+        pointer-events: none;
+      }
+    }
+  }
+  .fps-input-number-minus {
+    box-sizing: border-box;
+    width: 24px;
+    height: 24px;
+    border-right: 1px solid #979797;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .fps-input-number-plus {
+    box-sizing: border-box;
+    width: 24px;
+    height: 24px;
+    border-left: 1px solid #979797;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

@@ -1,0 +1,6 @@
+dist
+node_modules
+build
+babel.config.js
+changelog.js
+docs
